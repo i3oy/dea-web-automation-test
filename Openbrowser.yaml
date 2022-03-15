@@ -1,0 +1,42 @@
+base_url:   https://sc2-dev.tmap-em.toyota-asia.com/cas/login?service=http%3A%2F%2Fsc2-dev.tmap-em.toyota-asia.com%2F&locale=th_TH&un=
+env_base_url:   http://sc2-dev.tmap-em.toyota-asia.com
+
+#thailand normal user
+usernameTDEM :  knundhap
+passwordTDEM :  1234@abcd
+
+#thailand admin 
+usernameTDEMADMIN :  pchuthon
+passwordTDEMADMIN :  1234@abcd
+
+usernameTMT :   deatmt01
+passwordTMT :   1234@Abcd2
+
+#india
+usernameTKM : deatkm01
+passwordTKM : 1234@Abcd2
+
+#indonesia
+usernameTAM : deatmmin01
+passwordTAM : 1234@Abcd2
+
+#Malaysia
+usernameASSB : deaassb01
+passwordASSB : 1234@Abcd2
+
+#Vietnam
+usernameTMV : deatmv01
+passwordTMV : 1234@Abcd2
+
+#Dealer Taiwan
+usernameDealerTaiwan : deadlrtw
+passwordDealerTaiwan : 1234@Abcd2
+
+#Dealer Vietnam
+usernameDealerVietnam : deadlrvn
+passwordDealerVietnam : 1234@Abcd2
+
+#Username invalid and Password invalid
+usernameInvalid :  username
+PasswordInvalid :  passwordinvalid
+
