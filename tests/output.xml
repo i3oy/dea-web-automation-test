@@ -1,0 +1,1354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.1 (Python 3.9.7 on darwin)" generated="20211130 14:39:53.133" rpa="false" schemaversion="2">
+<suite id="s1" name="LanguageMaintenance" source="/Users/pisitchuthongkum/Documents/Documents - Pisit’s MacBook Air/dea-web-automation-test/tests/LanguageMaintenance.robot">
+<kw name="Run Keyword" library="BuiltIn" type="SETUP">
+<arg>Open Browser And Set Selemiun Speed</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="Open Browser And Set Selemiun Speed" library="VariablesSearch">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${base_url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211130 14:39:53.322" level="INFO">Opening browser 'chrome' to base url 'https://sc2-dev.tmap-em.toyota-asia.com/cas/login?service=http%3A%2F%2Fsc2-dev.tmap-em.toyota-asia.com%2F&amp;locale=th_TH&amp;un='.</msg>
+<status status="PASS" starttime="20211130 14:39:53.322" endtime="20211130 14:40:01.459"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211130 14:40:01.460" endtime="20211130 14:40:01.640"/>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<arg>0.3</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20211130 14:40:01.640" endtime="20211130 14:40:01.640"/>
+</kw>
+<status status="PASS" starttime="20211130 14:39:53.322" endtime="20211130 14:40:01.640"/>
+</kw>
+<status status="PASS" starttime="20211130 14:39:53.322" endtime="20211130 14:40:01.640"/>
+</kw>
+<test id="s1-t1" name="Call Login">
+<kw name="Login by Admin" library="VariablesSearch">
+<kw name="Click Element" library="Selenium2Library">
+<arg>${pressnotemployee}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:40:01.642" level="INFO">Clicking element 'xpath=/html/body/div[1]/div[4]/form/div[2]/div/div/div[2]/div/div[1]/div[1]/label/span/a'.</msg>
+<status status="PASS" starttime="20211130 14:40:01.642" endtime="20211130 14:40:02.453"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${selectdomain}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:40:02.454" level="INFO">Clicking element 'xpath=//*[@id="userdomain"]'.</msg>
+<status status="PASS" starttime="20211130 14:40:02.453" endtime="20211130 14:40:03.170"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${selecttdem}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:40:03.171" level="INFO">Clicking element 'xpath=//*[@id="userdomain"]/option[2]'.</msg>
+<status status="PASS" starttime="20211130 14:40:03.170" endtime="20211130 14:40:04.143"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>Class=username</arg>
+<arg>${usernameTDEMADMIN}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211130 14:40:04.144" level="INFO">Typing text 'pchuthon' into text field 'Class=username'.</msg>
+<status status="PASS" starttime="20211130 14:40:04.143" endtime="20211130 14:40:05.483"/>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<arg>Class=password</arg>
+<arg>${passwordTDEMADMIN}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20211130 14:40:05.486" level="INFO">Typing password into text field 'Class=password'.</msg>
+<msg timestamp="20211130 14:40:06.142" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20211130 14:40:06.493" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20211130 14:40:05.484" endtime="20211130 14:40:06.493"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${Login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:40:06.495" level="INFO">Clicking element 'xpath=//*[@id="login-row"]/div[1]/div[3]/div[1]/input'.</msg>
+<status status="PASS" starttime="20211130 14:40:06.494" endtime="20211130 14:40:11.887"/>
+</kw>
+<status status="PASS" starttime="20211130 14:40:01.641" endtime="20211130 14:40:11.888"/>
+</kw>
+<kw name="Click T-Diag(DEV)" library="VariablesSearch">
+<kw name="Click Element" library="Selenium2Library">
+<arg>${pressT-Diag}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:40:11.891" level="INFO">Clicking element 'xpath=//*[@id="content1"]/div/div[1]'.</msg>
+<status status="PASS" starttime="20211130 14:40:11.890" endtime="20211130 14:40:12.760"/>
+</kw>
+<status status="PASS" starttime="20211130 14:40:11.889" endtime="20211130 14:40:12.760"/>
+</kw>
+<kw name="Click New tab" library="VariablesSearch">
+<kw name="Switch Window" library="Selenium2Library">
+<var>${handle}</var>
+<arg>NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<msg timestamp="20211130 14:40:13.988" level="INFO">${handle} = CDwindow-C00A1C80EA531E9B4395895D1EB30304</msg>
+<status status="PASS" starttime="20211130 14:40:12.760" endtime="20211130 14:40:13.988"/>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<arg>T-Diag</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20211130 14:40:17.292" level="INFO">Page title is 'T-Diag'.</msg>
+<status status="PASS" starttime="20211130 14:40:13.989" endtime="20211130 14:40:17.293"/>
+</kw>
+<status status="PASS" starttime="20211130 14:40:12.760" endtime="20211130 14:40:17.294"/>
+</kw>
+<kw name="I want click icon search" library="VariablesSearch">
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<arg>reason=None</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211130 14:40:22.298" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20211130 14:40:17.295" endtime="20211130 14:40:22.298"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${iconsearch}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:40:22.299" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/div[1]/div/div[3]/div/ul/li/a/i'.</msg>
+<status status="PASS" starttime="20211130 14:40:22.298" endtime="20211130 14:40:23.425"/>
+</kw>
+<status status="PASS" starttime="20211130 14:40:17.294" endtime="20211130 14:40:23.425"/>
+</kw>
+<status status="PASS" starttime="20211130 14:40:01.641" endtime="20211130 14:40:23.426"/>
+</test>
+<test id="s1-t2" name="Scenario : Menu language maintenance">
+<kw name="Click language maintenance" library="VariablesSearch">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>T-Diag</arg>
+<arg>timeout=30</arg>
+<arg>error=None</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211130 14:40:23.430" endtime="20211130 14:40:23.780"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211130 14:40:28.783" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20211130 14:40:23.781" endtime="20211130 14:40:28.784"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${iconlangeuage}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:40:28.786" level="INFO">Clicking element 'id=Component_167_12'.</msg>
+<status status="PASS" starttime="20211130 14:40:28.785" endtime="20211130 14:40:29.747"/>
+</kw>
+<status status="PASS" starttime="20211130 14:40:23.429" endtime="20211130 14:40:29.748"/>
+</kw>
+<status status="PASS" starttime="20211130 14:40:23.428" endtime="20211130 14:40:29.748"/>
+</test>
+<test id="s1-t3" name="Scenario : Press search without select group">
+<kw name="Press search without select group" library="VariablesSearch">
+<kw name="Click Element" library="Selenium2Library">
+<arg>${btnfiltersearch}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:40:29.751" level="INFO">Clicking element 'id=filter-search'.</msg>
+<status status="PASS" starttime="20211130 14:40:29.750" endtime="20211130 14:40:30.585"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>Please select all filter</arg>
+<arg>timeout=60</arg>
+<arg>error=None</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211130 14:40:30.586" endtime="20211130 14:40:30.918"/>
+</kw>
+<status status="PASS" starttime="20211130 14:40:29.750" endtime="20211130 14:40:30.919"/>
+</kw>
+<status status="PASS" starttime="20211130 14:40:29.749" endtime="20211130 14:40:30.919"/>
+</test>
+<test id="s1-t4" name="Scenario : Select Groups">
+<kw name="Expand select group" library="VariablesSearch">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211130 14:40:32.922" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20211130 14:40:30.921" endtime="20211130 14:40:32.922"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${selectgroup}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:40:32.924" level="INFO">Clicking element 'name=group'.</msg>
+<status status="PASS" starttime="20211130 14:40:32.923" endtime="20211130 14:40:33.741"/>
+</kw>
+<status status="PASS" starttime="20211130 14:40:30.920" endtime="20211130 14:40:33.742"/>
+</kw>
+<kw name="Input keyword group" library="VariablesSearch">
+<for flavor="IN">
+<var>${searchgroup}</var>
+<value>Data collection</value>
+<value>Diagnosis</value>
+<value>EDER Checksheet</value>
+<value>Guideline Judgement</value>
+<iter>
+<var name="${searchgroup}">Data collection</var>
+<kw name="Input Text" library="Selenium2Library">
+<arg>class=rs-picker-search-bar-input</arg>
+<arg>${searchgroup}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211130 14:40:33.743" level="INFO">Typing text 'Data collection' into text field 'class=rs-picker-search-bar-input'.</msg>
+<status status="PASS" starttime="20211130 14:40:33.743" endtime="20211130 14:40:34.989"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${presscheckboxgroup}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:40:34.990" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/div[2]/div[2]/div[2]/div[1]/form/div[1]/div[2]/div[2]/div/a'.</msg>
+<status status="PASS" starttime="20211130 14:40:34.990" endtime="20211130 14:40:35.809"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${selectgroup}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:40:35.810" level="INFO">Clicking element 'name=group'.</msg>
+<status status="PASS" starttime="20211130 14:40:35.809" endtime="20211130 14:40:36.505"/>
+</kw>
+<status status="PASS" starttime="20211130 14:40:33.743" endtime="20211130 14:40:36.505"/>
+</iter>
+<iter>
+<var name="${searchgroup}">Diagnosis</var>
+<kw name="Input Text" library="Selenium2Library">
+<arg>class=rs-picker-search-bar-input</arg>
+<arg>${searchgroup}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211130 14:40:36.506" level="INFO">Typing text 'Diagnosis' into text field 'class=rs-picker-search-bar-input'.</msg>
+<status status="PASS" starttime="20211130 14:40:36.505" endtime="20211130 14:40:37.553"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${presscheckboxgroup}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:40:37.555" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/div[2]/div[2]/div[2]/div[1]/form/div[1]/div[2]/div[2]/div/a'.</msg>
+<status status="PASS" starttime="20211130 14:40:37.554" endtime="20211130 14:40:38.263"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${selectgroup}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:40:38.264" level="INFO">Clicking element 'name=group'.</msg>
+<status status="PASS" starttime="20211130 14:40:38.263" endtime="20211130 14:40:38.924"/>
+</kw>
+<status status="PASS" starttime="20211130 14:40:36.505" endtime="20211130 14:40:38.924"/>
+</iter>
+<iter>
+<var name="${searchgroup}">EDER Checksheet</var>
+<kw name="Input Text" library="Selenium2Library">
+<arg>class=rs-picker-search-bar-input</arg>
+<arg>${searchgroup}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211130 14:40:38.925" level="INFO">Typing text 'EDER Checksheet' into text field 'class=rs-picker-search-bar-input'.</msg>
+<status status="PASS" starttime="20211130 14:40:38.924" endtime="20211130 14:40:39.995"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${presscheckboxgroup}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:40:39.996" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/div[2]/div[2]/div[2]/div[1]/form/div[1]/div[2]/div[2]/div/a'.</msg>
+<status status="PASS" starttime="20211130 14:40:39.996" endtime="20211130 14:40:40.655"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${selectgroup}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:40:40.655" level="INFO">Clicking element 'name=group'.</msg>
+<status status="PASS" starttime="20211130 14:40:40.655" endtime="20211130 14:40:41.318"/>
+</kw>
+<status status="PASS" starttime="20211130 14:40:38.924" endtime="20211130 14:40:41.318"/>
+</iter>
+<iter>
+<var name="${searchgroup}">Guideline Judgement</var>
+<kw name="Input Text" library="Selenium2Library">
+<arg>class=rs-picker-search-bar-input</arg>
+<arg>${searchgroup}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211130 14:40:41.319" level="INFO">Typing text 'Guideline Judgement' into text field 'class=rs-picker-search-bar-input'.</msg>
+<status status="PASS" starttime="20211130 14:40:41.318" endtime="20211130 14:40:42.409"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${presscheckboxgroup}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:40:42.410" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/div[2]/div[2]/div[2]/div[1]/form/div[1]/div[2]/div[2]/div/a'.</msg>
+<status status="PASS" starttime="20211130 14:40:42.409" endtime="20211130 14:40:43.088"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${selectgroup}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:40:43.089" level="INFO">Clicking element 'name=group'.</msg>
+<status status="PASS" starttime="20211130 14:40:43.088" endtime="20211130 14:40:43.727"/>
+</kw>
+<status status="PASS" starttime="20211130 14:40:41.318" endtime="20211130 14:40:43.727"/>
+</iter>
+<status status="PASS" starttime="20211130 14:40:33.742" endtime="20211130 14:40:43.727"/>
+</for>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${CloseSelectgroup}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:40:43.728" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/div[2]/div[2]/div[2]/div[1]/form/div[1]/div/div/div/a/span[2]'.</msg>
+<status status="PASS" starttime="20211130 14:40:43.727" endtime="20211130 14:40:44.421"/>
+</kw>
+<status status="PASS" starttime="20211130 14:40:33.742" endtime="20211130 14:40:44.421"/>
+</kw>
+<status status="PASS" starttime="20211130 14:40:30.920" endtime="20211130 14:40:44.421"/>
+</test>
+<test id="s1-t5" name="Scenario : Select part in Diagnosis">
+<kw name="Select Diagnosis" library="VariablesSearch">
+<for flavor="IN">
+<var>${searchgroup}</var>
+<value>Diagnosis</value>
+<iter>
+<var name="${searchgroup}">Diagnosis</var>
+<kw name="Input Text" library="Selenium2Library">
+<arg>class=rs-picker-search-bar-input</arg>
+<arg>${searchgroup}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211130 14:40:44.424" level="INFO">Typing text 'Diagnosis' into text field 'class=rs-picker-search-bar-input'.</msg>
+<status status="PASS" starttime="20211130 14:40:44.424" endtime="20211130 14:40:45.460"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${presscheckboxgroup}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:40:45.461" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/div[2]/div[2]/div[2]/div[1]/form/div[1]/div[2]/div[2]/div/a'.</msg>
+<status status="PASS" starttime="20211130 14:40:45.460" endtime="20211130 14:40:46.124"/>
+</kw>
+<status status="PASS" starttime="20211130 14:40:44.423" endtime="20211130 14:40:46.125"/>
+</iter>
+<status status="PASS" starttime="20211130 14:40:44.423" endtime="20211130 14:40:46.125"/>
+</for>
+<status status="PASS" starttime="20211130 14:40:44.423" endtime="20211130 14:40:46.125"/>
+</kw>
+<kw name="Expand select part" library="VariablesSearch">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211130 14:40:48.130" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20211130 14:40:46.127" endtime="20211130 14:40:48.131"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${selectpart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:40:48.132" level="INFO">Clicking element 'name=part'.</msg>
+<status status="PASS" starttime="20211130 14:40:48.131" endtime="20211130 14:40:48.814"/>
+</kw>
+<status status="PASS" starttime="20211130 14:40:46.126" endtime="20211130 14:40:48.814"/>
+</kw>
+<kw name="Input BRAKE DISC Part" library="VariablesSearch">
+<for flavor="IN">
+<var>${searchpart}</var>
+<value>BRAKE DISC</value>
+<iter>
+<var name="${searchpart}">BRAKE DISC</var>
+<kw name="Input Text" library="Selenium2Library">
+<arg>class=rs-picker-search-bar-input</arg>
+<arg>${searchpart}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211130 14:40:48.816" level="INFO">Typing text 'BRAKE DISC' into text field 'class=rs-picker-search-bar-input'.</msg>
+<status status="PASS" starttime="20211130 14:40:48.815" endtime="20211130 14:40:49.849"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${selectcheckboxpart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:40:49.850" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/div[2]/div[2]/div[2]/div[1]/form/div[2]/div[2]/div[2]/div/a'.</msg>
+<status status="PASS" starttime="20211130 14:40:49.850" endtime="20211130 14:40:50.540"/>
+</kw>
+<status status="PASS" starttime="20211130 14:40:48.815" endtime="20211130 14:40:50.540"/>
+</iter>
+<status status="PASS" starttime="20211130 14:40:48.815" endtime="20211130 14:40:50.541"/>
+</for>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211130 14:40:51.542" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211130 14:40:50.541" endtime="20211130 14:40:51.542"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${btnfiltersearch}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:40:51.544" level="INFO">Clicking element 'id=filter-search'.</msg>
+<status status="PASS" starttime="20211130 14:40:51.543" endtime="20211130 14:40:52.226"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>Vibration Instruction</arg>
+<arg>timeout=60</arg>
+<arg>error=None</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211130 14:40:52.226" endtime="20211130 14:40:53.079"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>Vibration Sensor Instruction</arg>
+<arg>timeout=60</arg>
+<arg>error=None</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211130 14:40:53.080" endtime="20211130 14:40:53.396"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>Vibration Repair Instruction</arg>
+<arg>timeout=60</arg>
+<arg>error=None</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211130 14:40:53.397" endtime="20211130 14:40:53.717"/>
+</kw>
+<status status="PASS" starttime="20211130 14:40:48.814" endtime="20211130 14:40:53.718"/>
+</kw>
+<kw name="Expand select part" library="VariablesSearch">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211130 14:40:55.721" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20211130 14:40:53.719" endtime="20211130 14:40:55.721"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${selectpart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:40:55.723" level="INFO">Clicking element 'name=part'.</msg>
+<status status="PASS" starttime="20211130 14:40:55.722" endtime="20211130 14:40:56.399"/>
+</kw>
+<status status="PASS" starttime="20211130 14:40:53.718" endtime="20211130 14:40:56.399"/>
+</kw>
+<kw name="Input SHOCK ABSORBER Part" library="VariablesSearch">
+<for flavor="IN">
+<var>${searchpart}</var>
+<value>SHOCK</value>
+<iter>
+<var name="${searchpart}">SHOCK</var>
+<kw name="Input Text" library="Selenium2Library">
+<arg>class=rs-picker-search-bar-input</arg>
+<arg>${searchpart}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211130 14:40:56.401" level="INFO">Typing text 'SHOCK' into text field 'class=rs-picker-search-bar-input'.</msg>
+<status status="PASS" starttime="20211130 14:40:56.400" endtime="20211130 14:40:57.465"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${selectcheckboxpart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:40:57.465" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/div[2]/div[2]/div[2]/div[1]/form/div[2]/div[2]/div[2]/div/a'.</msg>
+<status status="PASS" starttime="20211130 14:40:57.465" endtime="20211130 14:40:58.140"/>
+</kw>
+<status status="PASS" starttime="20211130 14:40:56.400" endtime="20211130 14:40:58.140"/>
+</iter>
+<status status="PASS" starttime="20211130 14:40:56.400" endtime="20211130 14:40:58.140"/>
+</for>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211130 14:40:59.142" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211130 14:40:58.140" endtime="20211130 14:40:59.142"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${btnfiltersearch}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:40:59.144" level="INFO">Clicking element 'id=filter-search'.</msg>
+<status status="PASS" starttime="20211130 14:40:59.143" endtime="20211130 14:40:59.814"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>Photo Instruction</arg>
+<arg>timeout=60</arg>
+<arg>error=None</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211130 14:40:59.814" endtime="20211130 14:41:00.660"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>Photo Sub Instruction</arg>
+<arg>timeout=60</arg>
+<arg>error=None</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211130 14:41:00.661" endtime="20211130 14:41:00.975"/>
+</kw>
+<status status="PASS" starttime="20211130 14:40:56.400" endtime="20211130 14:41:00.976"/>
+</kw>
+<kw name="Expand select part" library="VariablesSearch">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211130 14:41:02.979" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20211130 14:41:00.977" endtime="20211130 14:41:02.979"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${selectpart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:41:02.981" level="INFO">Clicking element 'name=part'.</msg>
+<status status="PASS" starttime="20211130 14:41:02.980" endtime="20211130 14:41:03.644"/>
+</kw>
+<status status="PASS" starttime="20211130 14:41:00.977" endtime="20211130 14:41:03.645"/>
+</kw>
+<kw name="Input TURBO CHARGER Part" library="VariablesSearch">
+<for flavor="IN">
+<var>${searchpart}</var>
+<value>TURBO CHARGER</value>
+<iter>
+<var name="${searchpart}">TURBO CHARGER</var>
+<kw name="Input Text" library="Selenium2Library">
+<arg>class=rs-picker-search-bar-input</arg>
+<arg>${searchpart}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211130 14:41:03.647" level="INFO">Typing text 'TURBO CHARGER' into text field 'class=rs-picker-search-bar-input'.</msg>
+<status status="PASS" starttime="20211130 14:41:03.646" endtime="20211130 14:41:04.698"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${selectcheckboxpart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:41:04.700" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/div[2]/div[2]/div[2]/div[1]/form/div[2]/div[2]/div[2]/div/a'.</msg>
+<status status="PASS" starttime="20211130 14:41:04.699" endtime="20211130 14:41:05.384"/>
+</kw>
+<status status="PASS" starttime="20211130 14:41:03.646" endtime="20211130 14:41:05.384"/>
+</iter>
+<status status="PASS" starttime="20211130 14:41:03.646" endtime="20211130 14:41:05.384"/>
+</for>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211130 14:41:06.385" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211130 14:41:05.384" endtime="20211130 14:41:06.386"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${btnfiltersearch}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:41:06.388" level="INFO">Clicking element 'id=filter-search'.</msg>
+<status status="PASS" starttime="20211130 14:41:06.386" endtime="20211130 14:41:07.191"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>Checksheet Diagnosis</arg>
+<arg>timeout=60</arg>
+<arg>error=None</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211130 14:41:07.192" endtime="20211130 14:41:08.038"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>Checksheet Repair Instruction</arg>
+<arg>timeout=60</arg>
+<arg>error=None</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211130 14:41:08.039" endtime="20211130 14:41:08.359"/>
+</kw>
+<status status="PASS" starttime="20211130 14:41:03.645" endtime="20211130 14:41:08.359"/>
+</kw>
+<kw name="Expand select part" library="VariablesSearch">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211130 14:41:10.363" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20211130 14:41:08.360" endtime="20211130 14:41:10.363"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${selectpart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:41:10.365" level="INFO">Clicking element 'name=part'.</msg>
+<status status="PASS" starttime="20211130 14:41:10.364" endtime="20211130 14:41:11.025"/>
+</kw>
+<status status="PASS" starttime="20211130 14:41:08.360" endtime="20211130 14:41:11.026"/>
+</kw>
+<kw name="Input V-BELT TENSIONER Part" library="VariablesSearch">
+<for flavor="IN">
+<var>${searchpart}</var>
+<value>V-BELT</value>
+<iter>
+<var name="${searchpart}">V-BELT</var>
+<kw name="Input Text" library="Selenium2Library">
+<arg>class=rs-picker-search-bar-input</arg>
+<arg>${searchpart}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211130 14:41:11.028" level="INFO">Typing text 'V-BELT' into text field 'class=rs-picker-search-bar-input'.</msg>
+<status status="PASS" starttime="20211130 14:41:11.027" endtime="20211130 14:41:12.068"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${selectcheckboxpart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:41:12.069" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/div[2]/div[2]/div[2]/div[1]/form/div[2]/div[2]/div[2]/div/a'.</msg>
+<status status="PASS" starttime="20211130 14:41:12.069" endtime="20211130 14:41:12.744"/>
+</kw>
+<status status="PASS" starttime="20211130 14:41:11.027" endtime="20211130 14:41:12.744"/>
+</iter>
+<status status="PASS" starttime="20211130 14:41:11.027" endtime="20211130 14:41:12.744"/>
+</for>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211130 14:41:13.746" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211130 14:41:12.744" endtime="20211130 14:41:13.746"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${btnfiltersearch}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:41:13.748" level="INFO">Clicking element 'id=filter-search'.</msg>
+<status status="PASS" starttime="20211130 14:41:13.747" endtime="20211130 14:41:14.424"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>Noise Instruction</arg>
+<arg>timeout=60</arg>
+<arg>error=None</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211130 14:41:14.424" endtime="20211130 14:41:15.781"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>Noise Repair Instruction</arg>
+<arg>timeout=60</arg>
+<arg>error=None</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211130 14:41:15.781" endtime="20211130 14:41:16.109"/>
+</kw>
+<status status="PASS" starttime="20211130 14:41:11.026" endtime="20211130 14:41:16.109"/>
+</kw>
+<status status="PASS" starttime="20211130 14:40:44.422" endtime="20211130 14:41:16.110"/>
+</test>
+<test id="s1-t6" name="Scenario : Select part in Data collection">
+<kw name="Expand select group" library="VariablesSearch">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211130 14:41:18.116" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20211130 14:41:16.114" endtime="20211130 14:41:18.116"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${selectgroup}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:41:18.117" level="INFO">Clicking element 'name=group'.</msg>
+<status status="PASS" starttime="20211130 14:41:18.116" endtime="20211130 14:41:18.775"/>
+</kw>
+<status status="PASS" starttime="20211130 14:41:16.113" endtime="20211130 14:41:18.776"/>
+</kw>
+<kw name="Select Data collection" library="VariablesSearch">
+<for flavor="IN">
+<var>${searchgroup}</var>
+<value>Data collection</value>
+<iter>
+<var name="${searchgroup}">Data collection</var>
+<kw name="Input Text" library="Selenium2Library">
+<arg>class=rs-picker-search-bar-input</arg>
+<arg>${searchgroup}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211130 14:41:18.777" level="INFO">Typing text 'Data collection' into text field 'class=rs-picker-search-bar-input'.</msg>
+<status status="PASS" starttime="20211130 14:41:18.777" endtime="20211130 14:41:19.828"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${presscheckboxgroup}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:41:19.829" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/div[2]/div[2]/div[2]/div[1]/form/div[1]/div[2]/div[2]/div/a'.</msg>
+<status status="PASS" starttime="20211130 14:41:19.828" endtime="20211130 14:41:20.503"/>
+</kw>
+<status status="PASS" starttime="20211130 14:41:18.776" endtime="20211130 14:41:20.503"/>
+</iter>
+<status status="PASS" starttime="20211130 14:41:18.776" endtime="20211130 14:41:20.503"/>
+</for>
+<status status="PASS" starttime="20211130 14:41:18.776" endtime="20211130 14:41:20.503"/>
+</kw>
+<kw name="Expand select part" library="VariablesSearch">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211130 14:41:22.506" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20211130 14:41:20.504" endtime="20211130 14:41:22.507"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${selectpart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:41:22.509" level="INFO">Clicking element 'name=part'.</msg>
+<status status="PASS" starttime="20211130 14:41:22.508" endtime="20211130 14:41:23.167"/>
+</kw>
+<status status="PASS" starttime="20211130 14:41:20.504" endtime="20211130 14:41:23.167"/>
+</kw>
+<kw name="Input SEAT Part" library="VariablesSearch">
+<for flavor="IN">
+<var>${searchpart}</var>
+<value>SEAT</value>
+<iter>
+<var name="${searchpart}">SEAT</var>
+<kw name="Input Text" library="Selenium2Library">
+<arg>class=rs-picker-search-bar-input</arg>
+<arg>${searchpart}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211130 14:41:23.169" level="INFO">Typing text 'SEAT' into text field 'class=rs-picker-search-bar-input'.</msg>
+<status status="PASS" starttime="20211130 14:41:23.169" endtime="20211130 14:41:24.198"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${selectcheckboxpart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:41:24.199" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/div[2]/div[2]/div[2]/div[1]/form/div[2]/div[2]/div[2]/div/a'.</msg>
+<status status="PASS" starttime="20211130 14:41:24.198" endtime="20211130 14:41:24.872"/>
+</kw>
+<status status="PASS" starttime="20211130 14:41:23.168" endtime="20211130 14:41:24.872"/>
+</iter>
+<status status="PASS" starttime="20211130 14:41:23.168" endtime="20211130 14:41:24.872"/>
+</for>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211130 14:41:25.875" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211130 14:41:24.872" endtime="20211130 14:41:25.875"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${btnfiltersearch}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:41:25.877" level="INFO">Clicking element 'id=filter-search'.</msg>
+<status status="PASS" starttime="20211130 14:41:25.876" endtime="20211130 14:41:26.609"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>Checksheet Diagnosis</arg>
+<arg>timeout=60</arg>
+<arg>error=None</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211130 14:41:26.610" endtime="20211130 14:41:27.962"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>Checksheet Instruction</arg>
+<arg>timeout=60</arg>
+<arg>error=None</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211130 14:41:27.962" endtime="20211130 14:41:28.282"/>
+</kw>
+<status status="PASS" starttime="20211130 14:41:23.168" endtime="20211130 14:41:28.283"/>
+</kw>
+<kw name="Expand select part" library="VariablesSearch">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211130 14:41:30.287" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20211130 14:41:28.285" endtime="20211130 14:41:30.287"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${selectpart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:41:30.289" level="INFO">Clicking element 'name=part'.</msg>
+<status status="PASS" starttime="20211130 14:41:30.288" endtime="20211130 14:41:30.954"/>
+</kw>
+<status status="PASS" starttime="20211130 14:41:28.284" endtime="20211130 14:41:30.954"/>
+</kw>
+<kw name="Input SHOCK ABSORBER Part" library="VariablesSearch">
+<for flavor="IN">
+<var>${searchpart}</var>
+<value>SHOCK</value>
+<iter>
+<var name="${searchpart}">SHOCK</var>
+<kw name="Input Text" library="Selenium2Library">
+<arg>class=rs-picker-search-bar-input</arg>
+<arg>${searchpart}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211130 14:41:30.955" level="INFO">Typing text 'SHOCK' into text field 'class=rs-picker-search-bar-input'.</msg>
+<status status="PASS" starttime="20211130 14:41:30.955" endtime="20211130 14:41:31.985"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${selectcheckboxpart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:41:31.986" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/div[2]/div[2]/div[2]/div[1]/form/div[2]/div[2]/div[2]/div/a'.</msg>
+<status status="PASS" starttime="20211130 14:41:31.986" endtime="20211130 14:41:32.657"/>
+</kw>
+<status status="PASS" starttime="20211130 14:41:30.955" endtime="20211130 14:41:32.657"/>
+</iter>
+<status status="PASS" starttime="20211130 14:41:30.954" endtime="20211130 14:41:32.657"/>
+</for>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211130 14:41:33.658" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211130 14:41:32.657" endtime="20211130 14:41:33.659"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${btnfiltersearch}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:41:33.660" level="INFO">Clicking element 'id=filter-search'.</msg>
+<status status="PASS" starttime="20211130 14:41:33.659" endtime="20211130 14:41:34.342"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>Photo Instruction</arg>
+<arg>timeout=60</arg>
+<arg>error=None</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211130 14:41:34.343" endtime="20211130 14:41:35.186"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>Photo Sub Instruction</arg>
+<arg>timeout=60</arg>
+<arg>error=None</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211130 14:41:35.187" endtime="20211130 14:41:35.508"/>
+</kw>
+<status status="PASS" starttime="20211130 14:41:30.954" endtime="20211130 14:41:35.508"/>
+</kw>
+<kw name="Expand select part" library="VariablesSearch">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211130 14:41:37.510" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20211130 14:41:35.509" endtime="20211130 14:41:37.510"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${selectpart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:41:37.511" level="INFO">Clicking element 'name=part'.</msg>
+<status status="PASS" starttime="20211130 14:41:37.511" endtime="20211130 14:41:38.175"/>
+</kw>
+<status status="PASS" starttime="20211130 14:41:35.508" endtime="20211130 14:41:38.176"/>
+</kw>
+<kw name="Input STEERING WHEEL Part" library="VariablesSearch">
+<for flavor="IN">
+<var>${searchpart}</var>
+<value>STEERING WHEEL</value>
+<iter>
+<var name="${searchpart}">STEERING WHEEL</var>
+<kw name="Input Text" library="Selenium2Library">
+<arg>class=rs-picker-search-bar-input</arg>
+<arg>${searchpart}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211130 14:41:38.178" level="INFO">Typing text 'STEERING WHEEL' into text field 'class=rs-picker-search-bar-input'.</msg>
+<status status="PASS" starttime="20211130 14:41:38.177" endtime="20211130 14:41:39.225"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${selectcheckboxpart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:41:39.226" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/div[2]/div[2]/div[2]/div[1]/form/div[2]/div[2]/div[2]/div/a'.</msg>
+<status status="PASS" starttime="20211130 14:41:39.225" endtime="20211130 14:41:39.892"/>
+</kw>
+<status status="PASS" starttime="20211130 14:41:38.177" endtime="20211130 14:41:39.892"/>
+</iter>
+<status status="PASS" starttime="20211130 14:41:38.177" endtime="20211130 14:41:39.892"/>
+</for>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211130 14:41:40.895" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211130 14:41:39.893" endtime="20211130 14:41:40.895"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${btnfiltersearch}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:41:40.896" level="INFO">Clicking element 'id=filter-search'.</msg>
+<status status="PASS" starttime="20211130 14:41:40.895" endtime="20211130 14:41:41.573"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>Checksheet Diagnosis</arg>
+<arg>timeout=60</arg>
+<arg>error=None</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211130 14:41:41.574" endtime="20211130 14:41:42.406"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>Checksheet Instruction</arg>
+<arg>timeout=60</arg>
+<arg>error=None</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211130 14:41:42.407" endtime="20211130 14:41:42.725"/>
+</kw>
+<status status="PASS" starttime="20211130 14:41:38.176" endtime="20211130 14:41:42.726"/>
+</kw>
+<kw name="Expand select part" library="VariablesSearch">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211130 14:41:44.730" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20211130 14:41:42.727" endtime="20211130 14:41:44.730"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${selectpart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:41:44.731" level="INFO">Clicking element 'name=part'.</msg>
+<status status="PASS" starttime="20211130 14:41:44.730" endtime="20211130 14:41:45.396"/>
+</kw>
+<status status="PASS" starttime="20211130 14:41:42.726" endtime="20211130 14:41:45.397"/>
+</kw>
+<kw name="Input WATER PUMP Part" library="VariablesSearch">
+<for flavor="IN">
+<var>${searchpart}</var>
+<value>WATER PUMP</value>
+<iter>
+<var name="${searchpart}">WATER PUMP</var>
+<kw name="Input Text" library="Selenium2Library">
+<arg>class=rs-picker-search-bar-input</arg>
+<arg>${searchpart}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211130 14:41:45.399" level="INFO">Typing text 'WATER PUMP' into text field 'class=rs-picker-search-bar-input'.</msg>
+<status status="PASS" starttime="20211130 14:41:45.398" endtime="20211130 14:41:46.434"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${selectcheckboxpart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:41:46.436" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/div[2]/div[2]/div[2]/div[1]/form/div[2]/div[2]/div[2]/div/a'.</msg>
+<status status="PASS" starttime="20211130 14:41:46.434" endtime="20211130 14:41:47.130"/>
+</kw>
+<status status="PASS" starttime="20211130 14:41:45.398" endtime="20211130 14:41:47.130"/>
+</iter>
+<status status="PASS" starttime="20211130 14:41:45.398" endtime="20211130 14:41:47.130"/>
+</for>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211130 14:41:48.134" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211130 14:41:47.131" endtime="20211130 14:41:48.134"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${btnfiltersearch}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:41:48.137" level="INFO">Clicking element 'id=filter-search'.</msg>
+<status status="PASS" starttime="20211130 14:41:48.135" endtime="20211130 14:41:48.892"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>Checksheet Diagnosis</arg>
+<arg>timeout=60</arg>
+<arg>error=None</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211130 14:41:48.892" endtime="20211130 14:41:49.205"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>Checksheet Instruction</arg>
+<arg>timeout=60</arg>
+<arg>error=None</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211130 14:41:49.206" endtime="20211130 14:41:49.521"/>
+</kw>
+<status status="PASS" starttime="20211130 14:41:45.397" endtime="20211130 14:41:49.522"/>
+</kw>
+<status status="PASS" starttime="20211130 14:41:16.111" endtime="20211130 14:41:49.522"/>
+</test>
+<test id="s1-t7" name="Scenario : Select part in EDER Checksheet">
+<kw name="Expand select group" library="VariablesSearch">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211130 14:41:51.528" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20211130 14:41:49.526" endtime="20211130 14:41:51.528"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${selectgroup}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:41:51.529" level="INFO">Clicking element 'name=group'.</msg>
+<status status="PASS" starttime="20211130 14:41:51.528" endtime="20211130 14:41:52.191"/>
+</kw>
+<status status="PASS" starttime="20211130 14:41:49.525" endtime="20211130 14:41:52.191"/>
+</kw>
+<kw name="Select EDER Checksheet" library="VariablesSearch">
+<for flavor="IN">
+<var>${searchgroup}</var>
+<value>EDER Checksheet</value>
+<iter>
+<var name="${searchgroup}">EDER Checksheet</var>
+<kw name="Input Text" library="Selenium2Library">
+<arg>class=rs-picker-search-bar-input</arg>
+<arg>${searchgroup}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211130 14:41:52.192" level="INFO">Typing text 'EDER Checksheet' into text field 'class=rs-picker-search-bar-input'.</msg>
+<status status="PASS" starttime="20211130 14:41:52.192" endtime="20211130 14:41:53.230"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${presscheckboxgroup}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:41:53.231" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/div[2]/div[2]/div[2]/div[1]/form/div[1]/div[2]/div[2]/div/a'.</msg>
+<status status="PASS" starttime="20211130 14:41:53.231" endtime="20211130 14:41:53.893"/>
+</kw>
+<status status="PASS" starttime="20211130 14:41:52.192" endtime="20211130 14:41:53.893"/>
+</iter>
+<status status="PASS" starttime="20211130 14:41:52.191" endtime="20211130 14:41:53.893"/>
+</for>
+<status status="PASS" starttime="20211130 14:41:52.191" endtime="20211130 14:41:53.893"/>
+</kw>
+<kw name="Expand select part" library="VariablesSearch">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211130 14:41:55.895" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20211130 14:41:53.894" endtime="20211130 14:41:55.895"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${selectpart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:41:55.897" level="INFO">Clicking element 'name=part'.</msg>
+<status status="PASS" starttime="20211130 14:41:55.896" endtime="20211130 14:41:56.553"/>
+</kw>
+<status status="PASS" starttime="20211130 14:41:53.894" endtime="20211130 14:41:56.554"/>
+</kw>
+<kw name="Input CHASSIS Part" library="VariablesSearch">
+<for flavor="IN">
+<var>${searchpart}</var>
+<value>CHASSIS</value>
+<iter>
+<var name="${searchpart}">CHASSIS</var>
+<kw name="Input Text" library="Selenium2Library">
+<arg>class=rs-picker-search-bar-input</arg>
+<arg>${searchpart}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211130 14:41:56.554" level="INFO">Typing text 'CHASSIS' into text field 'class=rs-picker-search-bar-input'.</msg>
+<status status="PASS" starttime="20211130 14:41:56.554" endtime="20211130 14:41:57.593"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${selectcheckboxpart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:41:57.594" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/div[2]/div[2]/div[2]/div[1]/form/div[2]/div[2]/div[2]/div/a'.</msg>
+<status status="PASS" starttime="20211130 14:41:57.594" endtime="20211130 14:41:58.277"/>
+</kw>
+<status status="PASS" starttime="20211130 14:41:56.554" endtime="20211130 14:41:58.277"/>
+</iter>
+<status status="PASS" starttime="20211130 14:41:56.554" endtime="20211130 14:41:58.277"/>
+</for>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211130 14:41:59.279" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211130 14:41:58.278" endtime="20211130 14:41:59.279"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${btnfiltersearch}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:41:59.281" level="INFO">Clicking element 'id=filter-search'.</msg>
+<status status="PASS" starttime="20211130 14:41:59.280" endtime="20211130 14:41:59.940"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>Checksheet Diagnosis</arg>
+<arg>timeout=60</arg>
+<arg>error=None</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211130 14:41:59.941" endtime="20211130 14:42:00.261"/>
+</kw>
+<status status="PASS" starttime="20211130 14:41:56.554" endtime="20211130 14:42:00.262"/>
+</kw>
+<kw name="Expand select part" library="VariablesSearch">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211130 14:42:02.266" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20211130 14:42:00.264" endtime="20211130 14:42:02.267"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${selectpart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:42:02.269" level="INFO">Clicking element 'name=part'.</msg>
+<status status="PASS" starttime="20211130 14:42:02.268" endtime="20211130 14:42:02.928"/>
+</kw>
+<status status="PASS" starttime="20211130 14:42:00.263" endtime="20211130 14:42:02.928"/>
+</kw>
+<kw name="Input ENGINE Part" library="VariablesSearch">
+<for flavor="IN">
+<var>${searchpart}</var>
+<value>ENGINE</value>
+<iter>
+<var name="${searchpart}">ENGINE</var>
+<kw name="Input Text" library="Selenium2Library">
+<arg>class=rs-picker-search-bar-input</arg>
+<arg>${searchpart}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211130 14:42:02.930" level="INFO">Typing text 'ENGINE' into text field 'class=rs-picker-search-bar-input'.</msg>
+<status status="PASS" starttime="20211130 14:42:02.929" endtime="20211130 14:42:03.977"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${selectcheckboxpart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:42:03.978" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/div[2]/div[2]/div[2]/div[1]/form/div[2]/div[2]/div[2]/div/a'.</msg>
+<status status="PASS" starttime="20211130 14:42:03.977" endtime="20211130 14:42:04.659"/>
+</kw>
+<status status="PASS" starttime="20211130 14:42:02.929" endtime="20211130 14:42:04.659"/>
+</iter>
+<status status="PASS" starttime="20211130 14:42:02.929" endtime="20211130 14:42:04.659"/>
+</for>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211130 14:42:05.661" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211130 14:42:04.659" endtime="20211130 14:42:05.661"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${btnfiltersearch}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:42:05.663" level="INFO">Clicking element 'id=filter-search'.</msg>
+<status status="PASS" starttime="20211130 14:42:05.662" endtime="20211130 14:42:06.354"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>Checksheet Diagnosis</arg>
+<arg>timeout=60</arg>
+<arg>error=None</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211130 14:42:06.355" endtime="20211130 14:42:06.674"/>
+</kw>
+<status status="PASS" starttime="20211130 14:42:02.928" endtime="20211130 14:42:06.675"/>
+</kw>
+<status status="PASS" starttime="20211130 14:41:49.523" endtime="20211130 14:42:06.676"/>
+</test>
+<test id="s1-t8" name="Scenario : Select part in Guideline Judgement">
+<kw name="Expand select group" library="VariablesSearch">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211130 14:42:08.681" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20211130 14:42:06.680" endtime="20211130 14:42:08.682"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${selectgroup}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:42:08.684" level="INFO">Clicking element 'name=group'.</msg>
+<status status="PASS" starttime="20211130 14:42:08.683" endtime="20211130 14:42:09.337"/>
+</kw>
+<status status="PASS" starttime="20211130 14:42:06.679" endtime="20211130 14:42:09.338"/>
+</kw>
+<kw name="Select Guideline Judgement" library="VariablesSearch">
+<for flavor="IN">
+<var>${searchgroup}</var>
+<value>Guideline Judgement</value>
+<iter>
+<var name="${searchgroup}">Guideline Judgement</var>
+<kw name="Input Text" library="Selenium2Library">
+<arg>class=rs-picker-search-bar-input</arg>
+<arg>${searchgroup}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211130 14:42:09.340" level="INFO">Typing text 'Guideline Judgement' into text field 'class=rs-picker-search-bar-input'.</msg>
+<status status="PASS" starttime="20211130 14:42:09.339" endtime="20211130 14:42:10.378"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${presscheckboxgroup}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:42:10.378" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/div[2]/div[2]/div[2]/div[1]/form/div[1]/div[2]/div[2]/div/a'.</msg>
+<status status="PASS" starttime="20211130 14:42:10.378" endtime="20211130 14:42:11.027"/>
+</kw>
+<status status="PASS" starttime="20211130 14:42:09.339" endtime="20211130 14:42:11.027"/>
+</iter>
+<status status="PASS" starttime="20211130 14:42:09.339" endtime="20211130 14:42:11.027"/>
+</for>
+<status status="PASS" starttime="20211130 14:42:09.338" endtime="20211130 14:42:11.027"/>
+</kw>
+<kw name="Expand select part" library="VariablesSearch">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211130 14:42:13.032" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20211130 14:42:11.029" endtime="20211130 14:42:13.032"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${selectpart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:42:13.034" level="INFO">Clicking element 'name=part'.</msg>
+<status status="PASS" starttime="20211130 14:42:13.033" endtime="20211130 14:42:13.690"/>
+</kw>
+<status status="PASS" starttime="20211130 14:42:11.028" endtime="20211130 14:42:13.690"/>
+</kw>
+<kw name="Input CYLINDER HEAD COVER GASKET Part" library="VariablesSearch">
+<for flavor="IN">
+<var>${searchpart}</var>
+<value>CYLINDER HEAD COVER GASKET</value>
+<iter>
+<var name="${searchpart}">CYLINDER HEAD COVER GASKET</var>
+<kw name="Input Text" library="Selenium2Library">
+<arg>class=rs-picker-search-bar-input</arg>
+<arg>${searchpart}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211130 14:42:13.691" level="INFO">Typing text 'CYLINDER HEAD COVER GASKET' into text field 'class=rs-picker-search-bar-input'.</msg>
+<status status="PASS" starttime="20211130 14:42:13.691" endtime="20211130 14:42:14.747"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${selectcheckboxpart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:42:14.748" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/div[2]/div[2]/div[2]/div[1]/form/div[2]/div[2]/div[2]/div/a'.</msg>
+<status status="PASS" starttime="20211130 14:42:14.748" endtime="20211130 14:42:15.433"/>
+</kw>
+<status status="PASS" starttime="20211130 14:42:13.691" endtime="20211130 14:42:15.433"/>
+</iter>
+<status status="PASS" starttime="20211130 14:42:13.690" endtime="20211130 14:42:15.433"/>
+</for>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211130 14:42:16.436" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211130 14:42:15.434" endtime="20211130 14:42:16.436"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${btnfiltersearch}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:42:16.437" level="INFO">Clicking element 'id=filter-search'.</msg>
+<status status="PASS" starttime="20211130 14:42:16.436" endtime="20211130 14:42:17.110"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>Checksheet Diagnosis</arg>
+<arg>timeout=60</arg>
+<arg>error=None</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211130 14:42:17.111" endtime="20211130 14:42:17.429"/>
+</kw>
+<status status="PASS" starttime="20211130 14:42:13.690" endtime="20211130 14:42:17.429"/>
+</kw>
+<kw name="Expand select part" library="VariablesSearch">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211130 14:42:19.434" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20211130 14:42:17.431" endtime="20211130 14:42:19.434"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${selectpart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:42:19.436" level="INFO">Clicking element 'name=part'.</msg>
+<status status="PASS" starttime="20211130 14:42:19.435" endtime="20211130 14:42:20.078"/>
+</kw>
+<status status="PASS" starttime="20211130 14:42:17.430" endtime="20211130 14:42:20.078"/>
+</kw>
+<kw name="Input POWER STEERING GEAR SYSTEM Part" library="VariablesSearch">
+<for flavor="IN">
+<var>${searchpart}</var>
+<value>POWER STEERING GEAR SYSTEM</value>
+<iter>
+<var name="${searchpart}">POWER STEERING GEAR SYSTEM</var>
+<kw name="Input Text" library="Selenium2Library">
+<arg>class=rs-picker-search-bar-input</arg>
+<arg>${searchpart}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211130 14:42:20.081" level="INFO">Typing text 'POWER STEERING GEAR SYSTEM' into text field 'class=rs-picker-search-bar-input'.</msg>
+<status status="PASS" starttime="20211130 14:42:20.080" endtime="20211130 14:42:21.142"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${selectcheckboxpart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:42:21.142" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/div[2]/div[2]/div[2]/div[1]/form/div[2]/div[2]/div[2]/div/a'.</msg>
+<status status="PASS" starttime="20211130 14:42:21.142" endtime="20211130 14:42:21.812"/>
+</kw>
+<status status="PASS" starttime="20211130 14:42:20.080" endtime="20211130 14:42:21.813"/>
+</iter>
+<status status="PASS" starttime="20211130 14:42:20.079" endtime="20211130 14:42:21.813"/>
+</for>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211130 14:42:22.815" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211130 14:42:21.813" endtime="20211130 14:42:22.816"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${btnfiltersearch}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:42:22.819" level="INFO">Clicking element 'id=filter-search'.</msg>
+<status status="PASS" starttime="20211130 14:42:22.817" endtime="20211130 14:42:23.486"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>Checksheet Diagnosis</arg>
+<arg>timeout=60</arg>
+<arg>error=None</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211130 14:42:23.486" endtime="20211130 14:42:23.802"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>Checksheet Instruction</arg>
+<arg>timeout=60</arg>
+<arg>error=None</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211130 14:42:23.803" endtime="20211130 14:42:24.721"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>Checksheet Repair Instruction</arg>
+<arg>timeout=60</arg>
+<arg>error=None</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211130 14:42:24.722" endtime="20211130 14:42:25.044"/>
+</kw>
+<status status="PASS" starttime="20211130 14:42:20.079" endtime="20211130 14:42:25.044"/>
+</kw>
+<kw name="Expand select part" library="VariablesSearch">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211130 14:42:27.048" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20211130 14:42:25.045" endtime="20211130 14:42:27.048"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${selectpart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:42:27.049" level="INFO">Clicking element 'name=part'.</msg>
+<status status="PASS" starttime="20211130 14:42:27.048" endtime="20211130 14:42:27.722"/>
+</kw>
+<status status="PASS" starttime="20211130 14:42:25.045" endtime="20211130 14:42:27.723"/>
+</kw>
+<kw name="Input REAR ENGINE OIL SEAL Part" library="VariablesSearch">
+<for flavor="IN">
+<var>${searchpart}</var>
+<value>REAR ENGINE</value>
+<iter>
+<var name="${searchpart}">REAR ENGINE</var>
+<kw name="Input Text" library="Selenium2Library">
+<arg>class=rs-picker-search-bar-input</arg>
+<arg>${searchpart}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211130 14:42:27.724" level="INFO">Typing text 'REAR ENGINE' into text field 'class=rs-picker-search-bar-input'.</msg>
+<status status="PASS" starttime="20211130 14:42:27.724" endtime="20211130 14:42:28.775"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${selectcheckboxpart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:42:28.775" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/div[2]/div[2]/div[2]/div[1]/form/div[2]/div[2]/div[2]/div/a'.</msg>
+<status status="PASS" starttime="20211130 14:42:28.775" endtime="20211130 14:42:29.435"/>
+</kw>
+<status status="PASS" starttime="20211130 14:42:27.724" endtime="20211130 14:42:29.435"/>
+</iter>
+<status status="PASS" starttime="20211130 14:42:27.723" endtime="20211130 14:42:29.435"/>
+</for>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211130 14:42:30.437" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20211130 14:42:29.435" endtime="20211130 14:42:30.438"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${btnfiltersearch}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 14:42:30.439" level="INFO">Clicking element 'id=filter-search'.</msg>
+<status status="PASS" starttime="20211130 14:42:30.438" endtime="20211130 14:42:31.119"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>Checksheet Diagnosis</arg>
+<arg>timeout=60</arg>
+<arg>error=None</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211130 14:42:31.120" endtime="20211130 14:42:31.438"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>Checksheet Instruction</arg>
+<arg>timeout=60</arg>
+<arg>error=None</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211130 14:42:31.439" endtime="20211130 14:42:31.759"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>No.</arg>
+<arg>timeout=60</arg>
+<arg>error=None</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211130 14:42:31.759" endtime="20211130 14:42:32.085"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>Name</arg>
+<arg>timeout=60</arg>
+<arg>error=None</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211130 14:42:32.086" endtime="20211130 14:42:32.415"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>Group</arg>
+<arg>timeout=60</arg>
+<arg>error=None</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211130 14:42:32.416" endtime="20211130 14:42:32.741"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>Parts</arg>
+<arg>timeout=60</arg>
+<arg>error=None</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211130 14:42:32.742" endtime="20211130 14:42:33.060"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>Modify by</arg>
+<arg>timeout=60</arg>
+<arg>error=None</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211130 14:42:33.061" endtime="20211130 14:42:33.380"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>Last modify date</arg>
+<arg>timeout=60</arg>
+<arg>error=None</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211130 14:42:33.380" endtime="20211130 14:42:33.695"/>
+</kw>
+<status status="PASS" starttime="20211130 14:42:27.723" endtime="20211130 14:42:33.696"/>
+</kw>
+<status status="PASS" starttime="20211130 14:42:06.677" endtime="20211130 14:42:33.696"/>
+</test>
+<kw name="Close All Browsers" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20211130 14:42:33.700" endtime="20211130 14:42:34.075"/>
+</kw>
+<status status="PASS" starttime="20211130 14:39:53.134" endtime="20211130 14:42:34.075"/>
+</suite>
+<statistics>
+<total>
+<stat pass="8" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="8" fail="0" skip="0" id="s1" name="LanguageMaintenance">LanguageMaintenance</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
